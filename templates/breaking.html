@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container  col-md-12">
+        <div class="card text-center">
+            <div class="card-header">
+                <h3>{{ breakings.name}} {{ breakings.address}} Response</h3>
+                <small>Date Reported {{breakings.reported_at}}</small>
+                <hr>
+                <div class="card-text">
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-primary">Full Name</th>
+                            <th scope="col" class="text-primary">Description</th>
+                            <th scope="col" class="text-primary">Address</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>{{ breakings.name}}</td>
+                            <td>{{ breakings.description}}</td>
+                            <td>{{ breakings.address}}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

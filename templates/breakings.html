@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+        <div class="card">
+            <div class="card-header">
+                    <h1>Recently Reported Breakings </h1>
+            </div>
+            <div class="card-body">
+                    <ul class="list-group">
+                        {% for breakings in breakings %}
+                          <li class="list-group-item"><a href="contact_tracings/{{contact_tracings.id}}">{{breakings.name }}  {{breakings.address }} Recorded Date -  {{breakings.reported_at }} </a></li>
+                        {% endfor %}
+                    </ul>
+            </div>
+        </div>
+</div>
+{% endblock %}
